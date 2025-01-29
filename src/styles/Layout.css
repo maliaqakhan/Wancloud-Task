@@ -1,0 +1,87 @@
+.layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  background-color: var(--bg-secondary);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px var(--shadow-color);
+}
+
+.header h1 {
+  font-size: 1.5rem;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.main-container {
+  display: flex;
+  flex: 1;
+}
+
+.sidebar {
+  width: 250px;
+  background-color: var(--bg-secondary);
+  padding: 2rem 1rem;
+  border-right: 1px solid var(--border-color);
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-primary);
+  text-decoration: none;
+  border-radius: 8px;
+  transition: 0.3s;
+  position: relative;
+}
+
+.nav-link:hover {
+  background-color: rgba(120, 54, 186, 0.3); /* Pastel purple with transparency */
+  color: var(--text-primary);
+}
+
+.nav-link.active {
+  background-color: var(--bg-primary);
+}
+
+.nav-link.active::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background-color: var(--accent-color);
+  border-radius: 0 4px 4px 0;
+}
+
+.nav-link svg {
+  margin-right: 0.75rem;
+}
+
+.main-content {
+  flex: 1;
+  padding: 2rem;
+  height: calc(100vh - 100px); /* Account for header and footer */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-color: var(--bg-primary);
+}
+
+.footer {
+  background-color: var(--background-secondary);
+  color: var(--text-primary);
+  padding: 1rem;
+  text-align: center;
+  margin-top: auto;
+}

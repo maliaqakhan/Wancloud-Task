@@ -1,0 +1,35 @@
+.theme-toggle {
+    position: relative;
+    width: 60px;
+    height: 30px;
+    border-radius: 15px;
+    background-color: var(--bg-secondary);
+    cursor: pointer;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    padding: 0 5px;
+  }
+  
+  .toggle-thumb {
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background-color: var(--accent-color);
+    transition: 0.3s;
+    left: 2px;
+  }
+  
+  .theme-toggle.dark .toggle-thumb {
+    left: 32px;
+  }
+  
+  .theme-icons {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    color: var(--text-secondary);
+  }
